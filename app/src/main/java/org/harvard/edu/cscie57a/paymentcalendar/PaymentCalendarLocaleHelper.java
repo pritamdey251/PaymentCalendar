@@ -1,17 +1,14 @@
-package org.harvard.edu.cscie57a.testcalendar;
+package org.harvard.edu.cscie57a.paymentcalendar;
 
 import java.text.DateFormatSymbols;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.Format;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.time.chrono.IsoChronology;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.FormatStyle;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PaymentCalendarLocaleHelper {

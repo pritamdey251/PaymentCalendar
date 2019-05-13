@@ -1,18 +1,12 @@
-package org.harvard.edu.cscie57a.testcalendar;
+package org.harvard.edu.cscie57a.paymentcalendar;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.EditText;
 
-import org.harvard.edu.cscie57a.testcalendar.R;
-
-import java.util.Locale;
+import org.harvard.edu.cscie57a.paymentcalendar.R;
 
 public class MainActivity extends Activity {
 

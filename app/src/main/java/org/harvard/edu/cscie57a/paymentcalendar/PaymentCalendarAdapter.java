@@ -1,4 +1,4 @@
-package org.harvard.edu.cscie57a.testcalendar;
+package org.harvard.edu.cscie57a.paymentcalendar;
 
 import android.content.Context;
 import android.content.res.TypedArray;

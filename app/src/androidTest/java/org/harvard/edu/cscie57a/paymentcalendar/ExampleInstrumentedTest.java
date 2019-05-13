@@ -1,4 +1,4 @@
-package org.harvard.edu.cscie57a.testcalendar;
+package org.harvard.edu.cscie57a.paymentcalendar;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.harvard.edu.cscie57a.testcalendar", appContext.getPackageName());
+        assertEquals("org.harvard.edu.cscie57a.paymentcalendar", appContext.getPackageName());
     }
 }
