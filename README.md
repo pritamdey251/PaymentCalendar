@@ -45,10 +45,29 @@ You can switch locales by going to system settings and changing language/region 
 This application can also be run in Android Studio. You would not need to configure a emulator on a command line in that case. You can also choose to install MoreLocale2 from PlayStore if desired.
 
 ### Demo
-en_US             |  hi_IN
-:-------------------------:|:-------------------------:
-<img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/en_US.gif" alt="" height="350" width="200">  |  <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/hi_IN.gif" alt="" height="350" width="200">
+English (US)            |  Hindi (IN)    |  Bengali (IN)
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/en_US.gif" alt="" height="350" width="200">  |  <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/hi_IN.gif" alt="" height="350" width="200">  |  <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/bn_IN.gif" alt="" height="350" width="200">
 
+French (FR)   |   French (US)
+:-------------------------:|:-------------------------:
+<img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/fr_FR.gif" alt="" height="350" width="200">  |  <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/fr_US.gif" alt="" height="350" width="200">
+
+### State of work
+Application localized for:
+* en_US
+* hi_IN
+* bn_IN
+* fr_FR
+
+
+Application globalized with
+* Currency Number Format
+* Date Format
+* Editing Text
+* Position of currency symbol
+* System API: ```java System.lineSeparator() ```
+* System API: ```java username.toUpperCase(locale) ```
 
 #### ToDo:
 The Add Payment functionality is not implemented yet.
