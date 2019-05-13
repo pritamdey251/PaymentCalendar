@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">পেমেন্ট ক্যালেন্ডার</string>
+    <string name="year">বছর</string>
+    <string name="total_amount">সর্বমোট পরিমাণ</string>
+    <string name="space">" "</string>
+    <string name="month">মাস</string>
+    <string name="enter_description_text">বিবরণ লিখুন :</string>
+    <string name="enter_description_hint">বিবরণ</string>
+    <string name="date_selected">তারিখ নির্বাচিত :</string>
+    <string name="amount_text">পরিমাণ</string>
+    <string name="amount_hint">পরিমাণ</string>
+    <string name="alert_add_text">যোগ</string>
+    <string name="add_payment_advice">পেমেন্ট অ্যাডভাইস যোগ করুন</string>
+    <string name="hello">নমস্কার</string>
+    <string name="name_hint">আপনার নাম প্রবেশ করুন</string>
+    <string name="enter_name">এগিয়ে যান</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">calendrier de paiement</string>
+    <string name="amount_text">Montante</string>
+    <string name="amount_hint">Montante</string>
+    <string name="alert_add_text">Ajouter</string>
+    <string name="add_payment_advice">Ajouter un avis de paiement</string>
+    <string name="date_selected">Date sélectionnée:</string>
+    <string name="enter_description_hint">La description</string>
+    <string name="enter_description_text">Entrez la description:</string>
+    <string name="month">Mois</string>
+    <string name="total_amount">Montant total</string>
+    <string name="year">Year</string>
+    <string name="hello">Bonjour</string>
+    <string name="name_hint">Entrez votre nom</string>
+    <string name="space">" "</string>
+    <string name="enter_name">Suivant</string>
+</resources>

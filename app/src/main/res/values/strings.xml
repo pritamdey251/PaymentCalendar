@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Payment Calendar</string>
+    <string name="year">Year</string>
+    <string name="add_payment_advice">Add Payment Advice</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="date_selected">Date Selected :</string>
+    <string name="alert_add_text">Add</string>
+    <string name="amount_hint">Amount</string>
+    <string name="amount_text">Amount</string>
+    <string name="enter_description_text">Enter Description :</string>
+    <string name="enter_description_hint">Description</string>
+    <string name="month">Month</string>
+    <string name="space">" "</string>
+    <string name="hello">Hello</string>
+    <string name="name_hint">Enter your name !</string>
+    <string name="enter_name">Next</string>
+</resources>

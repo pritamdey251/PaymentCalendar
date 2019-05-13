@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">भुगतान कैलेंडर</string>
+    <string name="date_selected">तिथि का चयन :</string>
+    <string name="enter_description_hint">विवरण</string>
+    <string name="enter_description_text">विवरण दर्ज करें :</string>
+    <string name="month">महीना</string>
+    <string name="space">" "</string>
+    <string name="total_amount">कुल रकम</string>
+    <string name="year">साल</string>
+    <string name="amount_text">रकम</string>
+    <string name="amount_hint">रकम</string>
+    <string name="alert_add_text">राशि जोड़ें</string>
+    <string name="add_payment_advice">भुगतान सलाह जोड़ें</string>
+    <string name="hello">नमस्ते</string>
+    <string name="name_hint">अपना नाम दर्ज करें</string>
+    <string name="enter_name">आगे बढिये</string>
+</resources>

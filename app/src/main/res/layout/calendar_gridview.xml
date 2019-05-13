@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:horizontalSpacing="1dp"
+    android:verticalSpacing="1dp"
+    android:columnWidth="40dp"
+    android:paddingBottom="1.0dip"
+    android:numColumns="7"
+    android:clickable="true"
+    android:clipChildren="true"
+    android:listSelector="@color/cardview_light_background"
+    android:background="#00000000"
+    android:stretchMode="columnWidth">
+</GridView>
+
+
