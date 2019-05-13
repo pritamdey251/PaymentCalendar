@@ -56,7 +56,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/year"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/space"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:id="@+id/currentYear"
@@ -72,7 +72,7 @@
                 android:layout_height="35dp"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/space"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/space"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:id="@+id/monthText"
@@ -97,7 +97,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/month"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/space"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
             <TextView
                 android:id="@+id/currentMonth"
@@ -113,7 +113,7 @@
                 android:layout_height="35dp"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:textColor="#177ed6"
+                android:textColor="#64569F"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -135,8 +135,7 @@
 
         <TextView
             android:id="@+id/day0"
-            style="@style/weekdayName"
-            android:textColor="#177ed6" />
+            style="@style/weekendName" />
         <TextView
             android:id="@+id/day1"
             style="@style/weekdayName" />
@@ -159,8 +158,7 @@
 
         <TextView
             android:id="@+id/day6"
-            style="@style/weekdayName"
-            android:textColor="#177ed6" />
+            style="@style/weekendName" />
 
     </LinearLayout>
 

@@ -5,9 +5,8 @@
     android:background="#FFFFFF" >
 
     <TextView
-        android:id="@+id/textviewelement"
-        android:layout_width="45dp"
+        android:id="@+id/calendar_grid_element"
         android:layout_height="55dp"
+        android:layout_width="50dp"
         android:gravity="center" />
-
 </LinearLayout>

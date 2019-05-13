@@ -3,7 +3,6 @@ package org.harvard.edu.cscie57a.paymentcalendar;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -23,16 +22,32 @@ import java.util.Locale;
 
 import static android.graphics.Typeface.BOLD;
 
+/**
+ * PaymentCalendar Adapter class which creates and holds grid UI elements and values
+ */
 public class PaymentCalendarAdapter extends BaseAdapter {
 	private Date currentDate;
 	private DecimalFormat decimalFormatter;
 	private Context context;
+
+	/**
+	 * Holds the 42 dates to be shown in a grid
+	 */
 	private Date[] dateGridPosition = new Date[42];
+
+	/**
+	 * Holds the 42 payment amounts to be shown in the grid
+	 */
 	private double[] paymentGridPosition = new double[42];
-	private Drawable drawable = null;
 
 
-
+	/**
+	 * Parameterized constructor to initialize grid
+	 *
+	 * @param context
+	 * @param currentDate
+	 * @param locale
+	 */
 	public PaymentCalendarAdapter(Context context, Date currentDate, Locale locale) {
 		this.context = context;
 		this.decimalFormatter = (DecimalFormat) NumberFormat.getCurrencyInstance(locale);
@@ -40,32 +55,53 @@ public class PaymentCalendarAdapter extends BaseAdapter {
 		init(currentDate);
 	}
 
-	@Override
-	public int getCount() {
-		return dateGridPosition.length;
+	public void init(Date date) {
+		Calendar instance = Calendar.getInstance();
+		instance.setTime(date);
+		instance.set(Calendar.DATE, 1);
+
+		int dayOfWeek = instance.get(Calendar.DAY_OF_WEEK);
+		instance.add(Calendar.DATE, -dayOfWeek);
+
+		for (int i = 0; i < dateGridPosition.length; i++) {
+			instance.add(Calendar.DATE, 1);
+			dateGridPosition[i] = instance.getTime();
+			paymentGridPosition[i] = LocaleHelper.getInstance().randomDouble();
+		}
 	}
 
-	@Override
-	public Object getItem(int position) {
-		return position;
-	}
-
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
-
+	/**
+	 * Called to get each grid element.
+	 * This method populates each element in the calendar grid
+	 *
+	 * @param position
+	 * @param convertView
+	 * @param parent
+	 * @return
+	 */
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		if (convertView == null) {
 			convertView = LayoutInflater.from(context).inflate(R.layout.calendar_grid_item, parent, false);
 		}
-		TextView textView = convertView.findViewById(R.id.textviewelement);
+
+		// Get the calendar unit grid element
+		TextView textView = convertView.findViewById(R.id.calendar_grid_element);
+
+		// Populate text and format the element as to be shown at that position in the grid
 		defaultColorTextView(position, textView);
+
 		return convertView;
 	}
 
-	public void defaultColorTextView(int position, TextView textView) {
+
+	/**
+	 * Method to populate the actual content and color format of a single calendar grid unit
+	 *
+	 * @param position
+	 * @param calendarGridCellView
+	 */
+	public void defaultColorTextView(int position, TextView calendarGridCellView) {
 		Date date = dateGridPosition[position];
 		double payment = paymentGridPosition[position];
 
@@ -77,8 +113,11 @@ public class PaymentCalendarAdapter extends BaseAdapter {
 		SpannableStringBuilder sb = new SpannableStringBuilder();
 		sb.append(dayString);
 
-		// Show payment details in next line
+		// Use system locale aware line separator.
+		// This is used to show payment information in next line
 		sb.append(System.lineSeparator());
+
+		// Show payment details in next line
 		sb.append(paymentString);
 
 		SpannableString sp = new SpannableString(sb.toString());
@@ -89,9 +128,9 @@ public class PaymentCalendarAdapter extends BaseAdapter {
 
 		// Set format for payment amount
 		sp.setSpan(new RelativeSizeSpan(0.75f), dayString.length() + 1,
-				(dayString + paymentString).length() + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+				dayString.length() + paymentString.length() + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-		textView.setText(sp);
+		calendarGridCellView.setText(sp);
 
 
 		int[] attrs = {android.R.attr.textColor};
@@ -107,24 +146,34 @@ public class PaymentCalendarAdapter extends BaseAdapter {
 		int outOfScopeDateTextColor = getColorStyle(attrs, R.style.outOfScopeDateText);
 		int outOfScopeDateBackgroundColor = getColorStyle(attrs, R.style.outOfScopeDateBackground);
 
-		colorCurrentItemViewSelected(textView, outOfScopeDateTextColor, outOfScopeDateBackgroundColor);
+		// Color everyone as grey
+		colorCurrentItemViewSelected(calendarGridCellView, outOfScopeDateTextColor, outOfScopeDateBackgroundColor);
 
+		// Condition to color this month darker
 		if (dateGridPosition[position].getMonth() == currentDate.getMonth()
 				&& dateGridPosition[position].getYear() == currentDate.getYear()) {
-			colorCurrentItemViewSelected(textView, unSelectedWeekDateTextColor, unSelectedWeekDateBackgroundColor);
 
-			// Color Saturdays and Sundays
+			// Color this month darker
+			colorCurrentItemViewSelected(calendarGridCellView, unSelectedWeekDateTextColor, unSelectedWeekDateBackgroundColor);
+
+			// Color Saturdays and Sundays with weekend color format
 			if (position % 7 == 0 || position % 7 == 6) {
-				colorCurrentItemViewSelected(textView, unSelectedWeekEndDateTextColor, unSelectedWeekEndDateBackgroundColor);
+				colorCurrentItemViewSelected(calendarGridCellView, unSelectedWeekEndDateTextColor, unSelectedWeekEndDateBackgroundColor);
 			}
 		}
 
 		// Color today's dates
 		if (dateGridPosition[position].equals(currentDate)) {
-			colorCurrentItemViewSelected(textView, todayDateTextColor, todayDateBackgroundColor);
+			colorCurrentItemViewSelected(calendarGridCellView, todayDateTextColor, todayDateBackgroundColor);
 		}
 	}
 
+	/**
+	 * Populate selected calendar grid element with selected color scheme
+	 *
+	 * @param position
+	 * @param view
+	 */
 	public void selectedColorTextView(int position, TextView view) {
 		int[] attrs = {android.R.attr.textColor};
 		int selectedDateTextColor = getColorStyle(attrs, R.style.selectedDateText);
@@ -133,45 +182,66 @@ public class PaymentCalendarAdapter extends BaseAdapter {
 	}
 
 
+	/**
+	 * Read style attributes and return color value
+	 *
+	 * @param attrs
+	 * @param colorStyleName
+	 * @return
+	 */
 	public int getColorStyle(int[] attrs, int colorStyleName) {
 		TypedArray typedArray = context.obtainStyledAttributes(colorStyleName, attrs);
 		return typedArray.getColor(0, Color.BLACK);
 	}
 
+	/**
+	 * Generic method to set text and background color of calendar grid element
+	 *
+	 * @param currentItemView
+	 * @param textColor
+	 * @param backgroundColor
+	 */
 	private void colorCurrentItemViewSelected(View currentItemView, int textColor, int backgroundColor) {
-		TextView textView = currentItemView.findViewById(R.id.textviewelement);
+		TextView textView = currentItemView.findViewById(R.id.calendar_grid_element);
 		textView.setBackgroundColor(backgroundColor);
 		textView.setTextColor(textColor);
 	}
 
 
-	public void init(Date date) {
-		computeGridValues(date);
-	}
-
-	private void computeGridValues(Date date) {
-
-		Calendar instance = Calendar.getInstance();
-		instance.setTime(date);
-		instance.set(Calendar.DATE, 1);
-
-		int dayOfWeek = instance.get(Calendar.DAY_OF_WEEK);
-		instance.add(Calendar.DATE, -dayOfWeek);
-
-		for (int i = 0; i < dateGridPosition.length; i++) {
-			instance.add(Calendar.DATE, 1);
-			dateGridPosition[i] = instance.getTime();
-			paymentGridPosition[i] = PaymentCalendarLocaleHelper.getInstance().randomDouble();
-		}
-
-	}
-
+	/**
+	 * Helper method to retrieve date for a position in the 6X7 grid
+	 *
+	 * @param position
+	 * @return
+	 */
 	public Date getDateByPosition(int position) {
 		return dateGridPosition[position];
 	}
 
+	/**
+	 * Helper method to retrieve payment amount for a position in the 6X7 grid
+	 *
+	 * @param position
+	 * @return
+	 */
 	public double getPaymentByPosition(int position) {
 		return paymentGridPosition[position];
+	}
+
+
+	@Override
+	public int getCount() {
+		return paymentGridPosition.length;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return position;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
 	}
 
 }

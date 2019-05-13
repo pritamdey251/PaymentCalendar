@@ -17,8 +17,8 @@
     </style>
 
     <style name="weekdayName">
-        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_weight">1.0</item>
         <item name="android:gravity">center</item>
@@ -26,11 +26,22 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="weekendName">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#64569F</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
     <style name="todayDateText">
         <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="todayDateBackground">
-        <item name="android:textColor">#177ED6</item>
+        <item name="android:textColor">#64569F</item>
     </style>
 
     <style name="selectedDateText">
@@ -50,7 +61,7 @@
     </style>
 
     <style name="unSelectedWeekEndDateText">
-        <item name="android:textColor">#177ED6</item>
+        <item name="android:textColor">#64569F</item>
     </style>
 
     <style name="unSelectedWeekEndDateBackground">
