@@ -56,8 +56,8 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/year"
-                android:textColor="#64569F"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
@@ -97,8 +97,8 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/month"
-                android:textColor="#64569F"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
