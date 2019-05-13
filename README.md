@@ -53,6 +53,22 @@ French (FR)   |   French (US)
 :-------------------------:|:-------------------------:
 <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/fr_FR.gif" alt="" height="350" width="200">  |  <img src="https://github.com/pritamdey251/PaymentCalendar/raw/master/demo/fr_US.gif" alt="" height="350" width="200">
 
+### State of work
+Application localized for:
+* en_US
+* hi_IN
+* bn_IN
+* fr_FR
+
+
+Application globalized with
+* Currency Number Format
+* Date Format
+* Editing Text
+* Position of currency symbol
+* System API: ```java System.lineSeparator() ```
+* System API: ```java username.toUpperCase(locale) ```
+
 #### ToDo:
 The Add Payment functionality is not implemented yet.
 
