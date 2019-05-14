@@ -15,4 +15,6 @@
     <string name="hello">নমস্কার</string>
     <string name="name_hint">আপনার নাম প্রবেশ করুন</string>
     <string name="enter_name">এগিয়ে যান</string>
+    <string name="todo">কাজ চলছে !!!</string>
+    <string name="returntohomescreen">হোম স্ক্রিন ফেরোড</string>
 </resources>

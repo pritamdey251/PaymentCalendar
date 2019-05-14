@@ -163,6 +163,9 @@ public class PaymentCalendarActivity extends Activity implements View.OnClickLis
 												.toString());
 										Log.i("UserInputDescription", userInputDescription
 												.getText().toString());
+										Intent intent = new Intent(PaymentCalendarActivity
+												.this,AddPaymentActivity.class);
+										startActivity(intent);
 									}
 								});
 

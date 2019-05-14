@@ -20,6 +20,8 @@
         </activity>
         <activity android:name="org.harvard.edu.cscie57a.paymentcalendar.PaymentCalendarActivity">
         </activity>
+        <activity android:name="org.harvard.edu.cscie57a.paymentcalendar.AddPaymentActivity">
+        </activity>
     </application>
 
 </manifest>

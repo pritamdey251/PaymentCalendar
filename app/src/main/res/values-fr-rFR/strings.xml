@@ -15,4 +15,6 @@
     <string name="name_hint">Entrez votre nom</string>
     <string name="space">" "</string>
     <string name="enter_name">Suivant</string>
+    <string name="todo">En construction !!!</string>
+    <string name="returntohomescreen">Retour à l\'écran d\'accueil</string>
 </resources>

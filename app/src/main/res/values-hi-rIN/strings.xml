@@ -15,4 +15,6 @@
     <string name="hello">नमस्ते</string>
     <string name="name_hint">अपना नाम दर्ज करें</string>
     <string name="enter_name">आगे बढिये</string>
+    <string name="todo">काम ज़ारी है !!!</string>
+    <string name="returntohomescreen">घर स्क्रीन पर लौटें</string>
 </resources>
