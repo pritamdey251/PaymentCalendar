@@ -4,12 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
+/**
+ * Activity class for Adding Payment
+ * This is a TODO: class
+ * Currently it takes the user back to home screen with a button activity
+ */
 public class AddPaymentActivity extends Activity {
+
     /**
      * Overriden onCreate method to start main activity.
-     * This shows the main welcome screen.
+     * This shows the "Under Construction" screen.
      *
      * @param savedInstanceState
      */
@@ -20,7 +25,7 @@ public class AddPaymentActivity extends Activity {
     }
 
     /**
-     * Method called as a part of onClick event from "Next" button of home screen
+     * Method called as a part of onClick event from "Return to Home screen" button
      * @param view
      */
     public void showCalendarView(View view) {
