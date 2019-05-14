@@ -22,12 +22,12 @@ The emulator should be up and running after this command.
 ./adb install ./apk/MoreLocale2.apk 
 ```
 
-#### Install MyFirstApp apk into the emulator
+#### Install PaymentCalendar apk into the emulator
 ```shell
 ./adb install ./apk/app-debug.apk 
 ```
 
-This installs MoreLocale2 and MyFirstApp app in the emulator running. Once both the apps are installed, we need to give permissions to MoreLocale2 to modify system Locales
+This installs MoreLocale2 and PaymentCalendar app in the emulator running. Once both the apps are installed, we need to give permissions to MoreLocale2 to modify system Locales
 
 ```shell
 ./adb shell pm grant jp.co.c_lis.ccl.morelocale android.permission.CHANGE_CONFIGURATION
@@ -70,7 +70,7 @@ Application globalized with
 * System API: ```java username.toUpperCase(locale) ```
 
 #### ToDo:
-The Add Payment functionality is not implemented yet.
+The Add Payment functionality is not implemented yet. When you click on the Add Payment button it takes you to Under construction !! page.
 
 #### Conclusion:
 This application is localized for hi_IN, en_US and fr_FR. For all other locales it will default to using english language but all the globalized APIs (like currency format, date format, number format, weekdays, month names etc) would continue to work.
