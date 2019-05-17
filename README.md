@@ -74,3 +74,7 @@ The Add Payment functionality is not implemented yet. When you click on the Add 
 
 #### Conclusion:
 This application is localized for hi_IN, en_US and fr_FR. For all other locales it will default to using english language but all the globalized APIs (like currency format, date format, number format, weekdays, month names etc) would continue to work.
+
+#### References:
+1. Position of currency symbol in a particular locale: https://stackoverflow.com/questions/3809078/location-of-currency-symbol-for-a-particular-currency-in-java
+2. Design idea inspired by github calendar projects like: https://github.com/lichao315/Calendar/ and https://github.com/kenumir/android-calendar-card
